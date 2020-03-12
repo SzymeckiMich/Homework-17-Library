@@ -10,6 +10,8 @@ public class Main {
         Book book1 = new Book("Fiasko", "Stanisław Lem");
         Book book2 = new Book("Futu.re", "Dmitry Glukhovsky");
         Book book3 = new Book("Sztywny", "Michał Gołkowski");
+        Book book4 = new Book("Cujo", "Stephen King");
+        Book book5 = new Book("Martin Eden", "Jack London");
 
         library.allBooks.add(book1);
         library.allBooks.add(book2);
@@ -21,12 +23,14 @@ public class Main {
 
         library.borrowBook(person1, book1);
         library.borrowBook(person1, book2);
-        library.borrowBook(person3, book3);
+        library.borrowBook(person2, book1);
         library.borrowBook(person2, book3);
+        library.borrowBook(person3, book1);
+        library.borrowBook(person3, book4);
 
         library.showBooksWithAvailability();
 
-        library.returnBook(person1, book3);
+//        library.returnBook(person1, book3);
 
 
 
