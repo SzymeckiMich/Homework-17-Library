@@ -3,8 +3,17 @@ import java.util.List;
 
 public class Library {
 
-    List<Book> allBooks = new ArrayList<>();
-    List<Person> users = new ArrayList<>();
+    private List<Book> allBooks = new ArrayList<>();
+    private List<Person> users = new ArrayList<>();
+
+    public void addBookToStock(Book book) {
+        allBooks.add(book);
+    }
+
+    public void registerUser(Person person) {
+        users.add(person);
+    }
+
 
     public void borrowBook(Person person, Book book) {
         if (book.getAvailability() > 0) {

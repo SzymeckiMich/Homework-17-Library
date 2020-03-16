@@ -13,13 +13,15 @@ public class Main {
         Book book4 = new Book("Cujo", "Stephen King");
         Book book5 = new Book("Martin Eden", "Jack London");
 
-        library.allBooks.add(book1);
-        library.allBooks.add(book2);
-        library.allBooks.add(book3);
+        library.addBookToStock(book1);
+        library.addBookToStock(book2);
+        library.addBookToStock(book3);
+        library.addBookToStock(book4);
+        library.addBookToStock(book5);
 
-        library.users.add(person1);
-        library.users.add(person2);
-        library.users.add(person3);
+        library.registerUser(person1);
+        library.registerUser(person2);
+        library.registerUser(person3);
 
         library.borrowBook(person1, book1);
         library.borrowBook(person1, book2);
@@ -30,7 +32,7 @@ public class Main {
 
         library.showBooksWithAvailability();
 
-//        library.returnBook(person1, book3);
+        library.returnBook(person1, book3);
 
 
 
